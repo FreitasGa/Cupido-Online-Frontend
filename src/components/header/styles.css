@@ -1,0 +1,155 @@
+.Header {
+  background-color: #d75b79;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 6.25rem;
+  padding: 0 18.75rem;
+
+  transition: ease all .5s;
+}
+
+.Logo {
+  color: inherit;
+
+  font-weight: 500;
+  font-size: 2.5rem;
+
+  text-decoration: none;
+  -webkit-user-drag: none;
+
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinks {
+  display: flex;
+  justify-content: space-between;
+
+  width: 11rem;
+
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinks a {
+  color: inherit;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  border-radius: 5px;
+
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinks a:last-child {
+  margin-right: -8px;
+}
+
+.Header .HeaderLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.Header .HeaderDrawer {
+  display: none;
+}
+
+.Header .HeaderDrawer button {
+  color: inherit;
+  background: none;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  margin-right: -8px;
+  border: none;
+  border-radius: 5px;
+  outline: inherit;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.Header .HeaderDrawer button:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.MuiPaper-root {
+  background: #d75b79 !important;
+  padding: 1.2rem 1.8rem !important;
+}
+
+.MuiDrawer-paper img {
+  height: 3rem;
+  width: 3rem;
+
+  margin: 8px;
+
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.MuiDrawer-paper .HeaderDrawerLinks {
+  display: flex;
+  flex-direction: column;  
+  
+  transition: ease all .5s;
+}
+
+.MuiDrawer-paper .HeaderDrawerLinks a {
+  color: white;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  border-radius: 5px;
+
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.MuiDrawer-paper a:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+@media (max-width: 1600px) {
+  .Header {
+    padding: 0 12.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Header {
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 928px) {
+  .Header {
+    padding: 0 6.25rem;
+  }
+}
+
+@media (max-width: 688px) {
+  .Header {
+    padding: 0 1.5rem;
+  }
+
+  .Header .HeaderLinks {
+    display: none;
+  }
+
+  .Header .HeaderDrawer {
+    display: inline;
+  }
+}

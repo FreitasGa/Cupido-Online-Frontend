@@ -1,0 +1,176 @@
+.HomeBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  padding: 0 2rem;
+
+  transition: ease all .5s;
+}
+
+.HomeBody h2 {
+  color: #d75b79;
+
+  font-size: 1.875rem;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+  transition: ease all .5s;
+}
+
+.HomeAbout {
+  display: flex;
+  flex-direction: column;
+
+  width: 30rem;
+  margin: 8.5rem 0;
+
+  transition: ease all .5s;
+}
+
+.HomeAbout h2 {
+  padding-bottom: 5px;
+  border-bottom: solid 2px #d75b79;
+}
+
+.HomeAbout p{
+  font-size: 1.125rem;
+}
+
+.HomeMailerWrapper {
+  transition: ease all .5s;
+  margin: 8.5rem 0;
+
+  width: fit-content;
+
+  transition: ease all .5s;
+}
+
+.HomeBody .HomeMailerCard {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+  padding: 1.25rem 1.75rem;
+  border: solid #d75b79 2px;
+  border-radius: 0 20px 20px 20px;
+
+  transition: ease all .5s;
+}
+
+.HomeBody .HomeMailerCard p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.HomeMailerCard .MailerCardSubmit {
+  color: white;
+  background: #d75b79;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 10px 0;
+  border: none;
+  border-radius: 0 20px 20px 20px;
+  outline: inherit;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.HomeMailerCard .MailerCardSubmit:hover {
+  background-color: rgba(215, 91, 122, 0.9);
+}
+
+.MuiFormControl-root {
+  width: 18.75rem;
+  margin: 0 0 15px 0 !important;
+}
+
+.MuiFormControl-root:nth-child(4) {
+  margin: 0 0 25px 0 !important;
+}
+
+.MuiInputBase-root {
+  color: black !important;
+  opacity: 1 !important;
+
+  font: inherit !important;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  transition: ease all .5s;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb:hover {
+  background: #d75b79;
+}
+
+.MuiInputBase-input {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: black !important;
+  opacity: 1 !important;
+  font-size: 1.125rem !important;
+  font-weight: 500 !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid #d75b79 !important;
+}
+
+.MuiOutlinedInput-multiline {
+  padding: .75rem !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 5px !important;
+}
+
+.Mui-focused fieldset {
+  border-color: #d75b79 !important;
+}
+
+@media (max-width: 1024px){
+  .HomeBody{
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 928px) {
+  .HomeBody {
+    flex-direction: column;
+    align-items: center;
+  }
+  .HomeAbout{
+    margin: 2rem 0;
+  }
+  .HomeMailerWrapper{
+    margin: 0 0 2rem 0;
+  }
+}
+
+@media (max-width: 688px) {
+  .HomeMailerWrapper {
+    margin-top: 0rem;
+  }
+  .HomeAbout{
+    width: 22rem;
+  }
+}
