@@ -1,4 +1,4 @@
-.LoginHeader {
+.RegisterHeader {
   background-color: #d75b79;
   color: white;
 
@@ -9,7 +9,7 @@
   height: 6.25rem;
 }
 
-.LoginHeader.Logo{
+.RegisterHeader.Logo{
   color: inherit;
 
   font-weight: 500;
@@ -19,7 +19,7 @@
   -webkit-user-drag: none;
 }
 
-.LoginBody {
+.RegisterBody {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -29,7 +29,7 @@
   transition: ease all .5s;
 }
 
-.LoginBody h2 {
+.RegisterBody h2 {
   color: #d75b79;
 
   font-size: 1.875rem;
@@ -39,7 +39,7 @@
   transition: ease all .5s;
 }
 
-.LoginWrapper {
+.RegisterWrapper {
   display: flex;
   flex-direction: column;
   margin: 8.5rem 0;
@@ -47,7 +47,7 @@
   transition: ease all .5s;
 }
 
-.LoginBody .LoginCard {
+.RegisterBody .RegisterCard {
   display: flex;
   flex-direction: column;
 
@@ -59,30 +59,7 @@
   transition: ease all .5s;
 }
 
-.LoginCard button {
-  color: #d75b79;
-  background: none;
-
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
-
-  width: fit-content;
-  border: none;
-  outline: inherit;
-  margin: 0 0 10px 0;
-
-  cursor: pointer;
-  -webkit-user-drag: none;
-  transition: ease all .5s;
-}
-
-.LoginCard button:hover {
-  border-bottom: 1px solid #d75b79;
-  
-}
-
-.LoginCard .LoginCardSubmit {
+.RegisterCard .RegisterCardSubmit {
   color: white;
   background: #d75b79;
 
@@ -100,15 +77,15 @@
   transition: ease all .5s;
 }
 
-.LoginCard .LoginCardSubmit:hover {
+.RegisterCard .RegisterCardSubmit:hover {
   background-color: rgba(215, 91, 122, 0.9);
 }
 
-.LoginCard .MuiFormControl-root:nth-child(2) {
+.RegisterCard .MuiFormControl-root:nth-child(4) {
   margin: 0 0 25px 0 !important;
 }
 
-.LoginWrapper a{
+.RegisterWrapper a{
   color: white;
   background-color: #d75b79;
 
@@ -126,7 +103,7 @@
 }
 
 @media (max-width: 928px) {
-  .LoginWrapper {
+  .RegisterWrapper {
     margin: 5.25rem 0;
   }
 }

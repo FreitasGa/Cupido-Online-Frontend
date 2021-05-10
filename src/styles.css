@@ -29,3 +29,59 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.MuiFormControl-root {
+  width: 18.75rem !important;
+  margin: 0 0 15px 0 !important;
+}
+
+.MuiInputBase-root {
+  color: black !important;
+  opacity: 1 !important;
+
+  font: inherit !important;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  transition: ease all .5s;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb:hover {
+  background: #d75b79;
+}
+
+.MuiInputBase-input {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: black !important;
+  opacity: 1 !important;
+  font-size: 1.125rem !important;
+  font-weight: 500 !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid #d75b79 !important;
+}
+
+.MuiOutlinedInput-multiline {
+  padding: .75rem !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 5px !important;
+}
+
+.Mui-focused fieldset {
+  border-color: #d75b79 !important;
+}
