@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
-import { API, Auth } from "aws-amplify";
+import React, { useState } from "react";
+import { API } from "aws-amplify";
 
 import { onError } from "../../libs/errorLib";
 import { useAppContext } from "../../libs/contextLib";
 
 import Header from "../../components/header";
 import { TextField } from "@material-ui/core";
+import LoaderButton from "../../components/loaderButton";
 
 import "./styles.css";
-
 
 export default function Home() {
   const { isAuthenticated } = useAppContext();
@@ -25,14 +25,15 @@ export default function Home() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setIsLoading(true);
-
+    
     const message = {
       crush_name: crushName,
       crush_email: crushEmail,
       content,
     };
 
+    setIsLoading(true);
+    
     try {
       if (!isAuthenticated) {
         await sendMessage(message);
@@ -40,12 +41,13 @@ export default function Home() {
         await sendMessage(message);
         await createMessage(message);
       }
-
+      handleReset()
+      setIsLoading(false);
       alert("Mensagem enviada");
     } catch (err) {
       console.log(err);
-      onError(err);
       setIsLoading(false);
+      onError(err);
     }
   }
 
@@ -59,6 +61,15 @@ export default function Home() {
     return API.post("cupido-online", "/message", {
       body: message,
     });
+  }
+
+  const handleReset = () => {
+    Array.from(document.querySelectorAll('input')).forEach(
+      input => (input.value = "")
+    );
+    Array.from(document.querySelectorAll('textarea')).forEach(
+      input => (input.value = "")
+    );
   }
 
   return (
@@ -85,7 +96,9 @@ export default function Home() {
             <TextField id="standard-basic" placeholder="Email" type="email" onChange={(e) => setCrushEmail(e.target.value)}/>
             <p>Mensagem</p>
             <TextField id="outlined-multiline-flexible" multiline rowsMax={4} variant="outlined" onChange={(e) => setContent(e.target.value)}/>
-            <input className="MailerCardSubmit" type="submit" value="Enviar" disabled={!validateForm()} />
+            <LoaderButton type="submit" disabled={!validateForm()} isLoading={isLoading} className="MailerCardSubmit" >
+              Enviar
+            </LoaderButton>
           </form>
         </div>
       </div>

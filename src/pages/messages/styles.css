@@ -1,6 +1,8 @@
 .MessageBody {
   display: flex;
   justify-content: center;
+
+  padding: 0 2rem;
 }
 
 .MessageWrapper {
@@ -10,8 +12,8 @@
   justify-content: center;
   align-items: center;
 
-  max-width: 60rem;
-  margin: 8.5rem 0 0 0;
+  max-width: 70rem;
+  margin: 3rem 0 0 0;
   
   transition: ease all .5s;
 }
@@ -22,8 +24,20 @@
   transition: ease all .5s;
 }
 
+.MessagePlaceholder {
+  margin: 8rem 2rem;
+
+  text-align: center;
+
+  transition: ease all .5s;
+}
+
 @media (max-width: 928px) {
   .MessageWrapper {
-    margin: 4rem 0;
+    margin: 2rem 0;
+  }
+
+  .MessagePlaceholder{
+    margin: 6rem 2rem;
   }
 }

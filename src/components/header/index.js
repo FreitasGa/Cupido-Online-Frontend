@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Auth } from "aws-amplify"
 
 import { useAppContext } from "../../libs/contextLib";
@@ -11,6 +11,7 @@ import "./styles.css";
 import logo from "../../assets/g841.png";
 
 export default function Header() {
+  const history = useHistory();
   const { userHasAuthenticated, isAuthenticated } = useAppContext();
   const [drawer, setDrawer] = useState(false);
 
@@ -22,10 +23,12 @@ export default function Header() {
   };
 
   async function handleLogout() {
+    sessionStorage.removeItem("cupido-online/messages");
     await Auth.signOut();
 
     userHasAuthenticated(false);
-    console.log("Logged Out");
+    alert("Saiu da conta");
+    history.push("/");
   }
 
   return (

@@ -1,4 +1,4 @@
-.HomeBody {
+.ProfileBody {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -8,7 +8,7 @@
   transition: ease all .5s;
 }
 
-.HomeBody h2 {
+.ProfileBody h2 {
   color: #d75b79;
 
   font-size: 1.875rem;
@@ -19,33 +19,17 @@
   transition: ease all .5s;
 }
 
-.HomeAbout {
+.ProfileWrapper {
   display: flex;
   flex-direction: column;
 
-  width: 30rem;
-  margin: 8.5rem 0;
-
-  transition: ease all .5s;
-}
-
-.HomeAbout h2 {
-  padding-bottom: 5px;
-  border-bottom: solid 2px #d75b79;
-}
-
-.HomeAbout p {
-  font-size: 1.125rem;
-}
-
-.HomeMailerWrapper {
   margin: 8.5rem 0;
   width: fit-content;
 
   transition: ease all .5s;
 }
 
-.HomeMailerCard {
+.ProfileCard {
   display: flex;
   flex-direction: column;
 
@@ -57,14 +41,33 @@
   transition: ease all .5s;
 }
 
-.HomeMailerCard p {
-  font-size: 1.125rem;
-  font-weight: 500;
-
-  margin-bottom: 7px;
+.ProfileCard h3 {
+  margin-bottom: 5px;
 }
 
-.MailerCardSubmit {
+.EditPasswordWrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: 8.5rem 0;
+  width: fit-content;
+
+  transition: ease all .5s;
+}
+
+.EditPasswordCard {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+  padding: 1.25rem 1.75rem;
+  border: solid #d75b79 2px;
+  border-radius: 0 20px 20px 20px;
+
+  transition: ease all .5s;
+}
+
+.EditPasswordCard .EditPasswordCardSubmit {
   color: white;
   background: #d75b79;
 
@@ -86,88 +89,63 @@
   transition: ease all .5s;
 }
 
-.MailerCardSubmit:hover {
+.EditPasswordCard .EditPasswordCardSubmit:hover {
   background-color: rgba(215, 91, 122, 0.9);
 }
 
-.HomeMailerCard .MuiFormControl-root:nth-child(4) {
+.EditPasswordCard .MuiFormControl-root:nth-child(3) {
   margin: 0 0 25px 0 !important;
 }
 
-.HomeMailerCard textarea::-webkit-scrollbar {
-  width: 8px;
-}
-
-.HomeMailerCard textarea::-webkit-scrollbar-track {
-  background: #f1f1f1;
-
-  border-radius: 5px;
-}
-
-.HomeMailerCard textarea::-webkit-scrollbar-thumb {
-  background: #888;
-
-  border-radius: 5px;
-
-  transition: ease all .5s;
-}
-
-.HomeMailerCard textarea::-webkit-scrollbar-thumb:hover {
-  background: #d75b79;
-}
-
 @media (max-width: 1024px) {
-  .HomeBody {
-    justify-content: space-between;
+  .ProfileBody {
+    justify-content: space-around;
   }
 }
 
 @media (max-width: 928px) {
-  .HomeBody {
+  .ProfileBody {
     flex-direction: column;
     align-items: center;
   }
 
-  .HomeAbout {
+  .ProfileWrapper {
     margin: 2rem 0;
   }
 
-  .HomeMailerWrapper {
+  .EditPasswordWrapper {
     margin: 0 0 2rem 0;
   }
+
 }
 
 @media (max-width: 688px) {
-  .HomeMailerWrapper {
+  .EditPasswordWrapper {
     margin-top: 0rem;
   }
 
-  .HomeAbout {
-    width: 22rem;
-  }
-
-  .HomeBody h2 {
+  .ProfileBody h2 {
     font-size: 2rem;
   }
 
-  .HomeAbout p {
+  .ProfileCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .ProfileCard p{
     font-size: 1.25rem;
   }
 
-  .HomeMailerCard p {
-    font-size: 1.25rem;
-  }
-
-  .MailerCardSubmit {
+  .EditPasswordCard .EditPasswordCardSubmit {
     font-size: 1.50rem;
   }
 
-  .HomeMailerCard .MuiInputBase-input {
+  .EditPasswordCard .MuiInputBase-input {
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }
 
-  .HomeMailerCard .MuiInputBase-input::placeholder {
+  .EditPasswordCard .MuiInputBase-input::placeholder {
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }

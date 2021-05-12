@@ -24,21 +24,21 @@
   transition: ease all .5s;
 }
 
-.Header .HeaderLinks {
+.HeaderLinks {
   display: flex;
   justify-content: space-between;
 
   transition: ease all .5s;
 }
 
-.Header .HeaderLinksLogged {
+.HeaderLinksLogged {
   display: flex;
   justify-content: space-between;
 
   transition: ease all .5s;
 }
 
-.Header .HeaderLinks a {
+.HeaderLinks a {
   color: inherit;
 
   font-weight: 500;
@@ -52,15 +52,15 @@
   transition: ease all .5s;
 }
 
-.Header .HeaderLinks a:last-child {
+.HeaderLinks a:last-child {
   margin-right: -8px;
 }
 
-.Header .HeaderLinks a:hover {
+.HeaderLinks a:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
-.Header .HeaderLinksLogged a {
+.HeaderLinksLogged a {
   color: inherit;
 
   font-weight: 500;
@@ -74,15 +74,15 @@
   transition: ease all .5s;
 }
 
-.Header .HeaderLinksLogged a:hover {
+.HeaderLinksLogged a:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
-.Header .HeaderLinksLogged:last-child {
+.HeaderLinksLogged:last-child {
   margin-right: -8px;
 }
 
-.Header .HeaderLinksLogged button {
+.HeaderLinksLogged button {
   color: inherit;
   background: none;
 
@@ -101,15 +101,15 @@
   transition: ease all .5s;
 }
 
-.Header .HeaderLinksLogged button:hover {
+.HeaderLinksLogged button:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
-.Header .HeaderDrawer {
+.HeaderDrawer {
   display: none;
 }
 
-.Header .HeaderDrawer button {
+.HeaderDrawer button {
   color: inherit;
   background: none;
 
@@ -128,7 +128,7 @@
   transition: ease all .5s;
 }
 
-.Header .HeaderDrawer button:hover {
+.HeaderDrawer button:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
@@ -224,11 +224,11 @@
     padding: 0 1.5rem;
   }
 
-  .Header .HeaderLinksWrapper {
+  .HeaderLinksWrapper {
     display: none !important;
   }
 
-  .Header .HeaderDrawer {
+  .HeaderDrawer {
     display: inline;
   }
 }

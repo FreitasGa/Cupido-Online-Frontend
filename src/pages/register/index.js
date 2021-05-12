@@ -8,6 +8,7 @@ import { onError } from "../../libs/errorLib";
 import { TextField } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
+import LoaderButton from "../../components/loaderButton";
 import "./styles.css";
 
 export default function Register() {
@@ -48,12 +49,13 @@ export default function Register() {
           name: name,
         }
       });
+      handleReset();
       setIsLoading(false);
       setNewUser(newUser);
     } catch (err) {
       console.log(err);
       onError(err);
-      setIsLoading(false)
+      setIsLoading(false);
     }
   }
 
@@ -65,6 +67,7 @@ export default function Register() {
       await Auth.confirmSignUp(email, confirmationCode);
       await Auth.signIn(email, password);
 
+      handleReset();
       userHasAuthenticated(true);
       history.push("/");
     } catch (err) {
@@ -72,6 +75,12 @@ export default function Register() {
       onError(err);
       setIsLoading(false);
     }
+  }
+
+  const handleReset = () => {
+    Array.from(document.querySelectorAll('input')).forEach(
+      input => (input.value = "")
+    );
   }
 
   function registerForm() {
@@ -83,7 +92,9 @@ export default function Register() {
           <TextField id="standard-basic" placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)} />
           <TextField id="standard-basic" placeholder="Senha" type="password" onChange={(e) => setPassword(e.target.value)} />
           <TextField id="standard-basic" placeholder="Confirme a senha" type="password" onChange={(e) => setConfirmPassword(e.target.value)} />
-          <input className="RegisterCardSubmit" type="submit" value="Criar conta" disabled={!validateForm()}/>
+          <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="RegisterCardSubmit">
+            Criar conta
+          </LoaderButton>
         </form>
         <Link to="/login">Entre com email</Link>
       </div>
@@ -97,7 +108,9 @@ export default function Register() {
         <form className="RegisterCard" onSubmit={handleConfirmationSubmit}>
           <p>Verifique o o código que foi enviado ao seu email</p>
           <TextField id="standard-basic" placeholder="Código" autoFocus onChange={(e) => setConfirmationCode(e.target.value)} />
-          <input className="RegisterCardSubmit" type="submit" value="Verificar" disabled={!validateConfirmationForm()} />
+          <LoaderButton type="submit" isLoading={isLoading} disabled={!validateConfirmationForm()} className="RegisterCardSubmit">
+            Verificar
+          </LoaderButton>
         </form>
       </div>
     );

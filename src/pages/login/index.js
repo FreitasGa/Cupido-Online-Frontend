@@ -8,6 +8,7 @@ import { onError } from "../../libs/errorLib";
 import { TextField } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
+import LoaderButton from "../../components/loaderButton";
 import "./styles.css";
 
 export default function Login() {
@@ -23,17 +24,17 @@ export default function Login() {
   }
 
   async function handleSubmit(event) {
-    console.log(email, password);
     event.preventDefault();
-
     setIsLoading(true);
 
     try {
       await Auth.signIn(email, password);
       userHasAuthenticated(true);
+      setIsLoading(false);
       history.push("/");
     } catch (err) {
       console.log(err);
+      setIsLoading(false);
       onError(err);
     }
   }
@@ -55,8 +56,10 @@ export default function Login() {
           <form className="LoginCard" onSubmit={handleSubmit}>
             <TextField id="standard-basic" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoFocus />
             <TextField id="standard-basic" placeholder="Senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button>Esqueci a Senha</button>
-            <input className="LoginCardSubmit" type="submit" value="Entrar" disabled={!validateForm()} />
+            <Link to="/forgot-password" className="LoginForgotPassword">Esqueci a Senha</Link>
+            <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="LoginCardSubmit">
+              Entrar
+            </LoaderButton>
           </form>
           <Link to="/register">Crie uma conta</Link>
         </div>

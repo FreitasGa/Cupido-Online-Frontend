@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { API } from "aws-amplify";
 
 import { onError } from "../../libs/errorLib";
@@ -10,9 +10,11 @@ import Message from "../../components/message";
 import "./styles.css";
 
 export default function Messages() {
+  const sessionMessage = JSON.parse(sessionStorage.getItem("cupido-online/messages"));
   const { isAuthenticated } = useAppContext();
 
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(sessionMessage || []);
+  const [state, setState] = useState(false);
 
   useEffect(() => {
     async function onLoad() {
@@ -21,19 +23,21 @@ export default function Messages() {
       }
 
       try {
-        const messages = await loadMessage();
+        const messages = await API.get("cupido-online", "/message");
         setMessages(messages);
+        sessionStorage.setItem("cupido-online/messages",JSON.stringify(messages));
         console.log(messages);
-      } catch (e) {
-        onError(e);
+      } catch (err) {
+        console.log(err);
+        onError(err);
       }
     }
 
     onLoad();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, state]);
 
-  function loadMessage() {
-    return API.get("cupido-online", "/message");
+  function update() {
+    setState(!state);
   }
 
   return (
@@ -41,9 +45,13 @@ export default function Messages() {
       <Header />
       <div className="MessageBody">
         <div className="MessageWrapper">
-          {messages.map(({id, crush_name, crush_email, content, is_match}) => (
-            <Message key={id} id={id} name={crush_name} email={crush_email} content={content} match={is_match} />
-          ))}
+          {messages.length === 0 ? (
+            <h2 className="MessagePlaceholder">Parece que você ainda não tem nenhuma mensagem.</h2>
+          ) : 
+            messages.map(({id, crush_name, crush_email, content, is_match}) => (
+              <Message key={id} id={id} name={crush_name} email={crush_email} content={content} match={is_match} callback={update} />
+            ))
+          }
         </div>
       </div>
     </div>

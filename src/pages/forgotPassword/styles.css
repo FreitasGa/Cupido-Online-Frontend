@@ -1,23 +1,20 @@
-.LoginHeader {
+.ForgotPasswordHeader {
   background-color: #d75b79;
-  color: white !important;
+  color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 
   height: 6.25rem;
 }
 
-.LoginHeader .Icon {
+.ForgotPasswordHeader .Icon {
   position: absolute;
   left: 2rem;
-
-  transition: ease all .5s;
 }
 
-.LoginHeader.Logo {
+.ForgotPasswordHeader .Logo {
   color: inherit;
 
   font-weight: 500;
@@ -25,10 +22,9 @@
 
   text-decoration: none;
   -webkit-user-drag: none;
-  transition: ease all .5s;
 }
 
-.LoginBody {
+.ForgotPasswordBody {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -38,7 +34,7 @@
   transition: ease all .5s;
 }
 
-.LoginBody h2 {
+.ForgotPasswordBody h2 {
   color: #d75b79;
 
   font-size: 1.875rem;
@@ -49,17 +45,17 @@
   transition: ease all .5s;
 }
 
-.LoginWrapper {
+.ForgotPasswordWrapper {
   display: flex;
   flex-direction: column;
 
   margin: 8.5rem 0;
   width: fit-content;
-
+  
   transition: ease all .5s;
 }
 
-.LoginCard {
+.ForgotPasswordCard {
   display: flex;
   flex-direction: column;
 
@@ -71,32 +67,17 @@
   transition: ease all .5s;
 }
 
-.LoginForgotPassword {
-  color: #d75b79;
-  background: none;
+.ForgotPasswordCard p {
+  font-size: 1.125rem;
+  text-align: center;
 
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
+  margin: 0 0 10px;
+  width: 18.75rem;
 
-  width: fit-content;
-  border: none;
-  outline: inherit;
-  margin: 0 0 10px 0;
-  padding: 0;
-  border-radius: 0;
-  border-bottom: 1px dashed #d75b79;
-
-  cursor: pointer;
-  -webkit-user-drag: none;
   transition: ease all .5s;
 }
 
-.LoginForgotPassword:hover {
-  border-bottom: 1px solid #d75b79;
-}
-
-.LoginCardSubmit {
+.ForgotPasswordCard .ForgotPasswordCardSubmit {
   color: white;
   background: #d75b79;
 
@@ -108,83 +89,58 @@
   font-size: 1.25rem;
   text-decoration: none;
 
+  margin-top: 10px;
   padding: 10px 0;
   border: none;
   border-radius: 0 20px 20px 20px;
   outline: inherit;
-  width: auto;
 
   cursor: pointer;
   -webkit-user-drag: none;
   transition: ease all .5s;
 }
 
-.LoginCardSubmit:hover {
-  border-bottom: none;
+.ForgotPasswordCard .ForgotPasswordCardSubmit:hover {
   background-color: rgba(215, 91, 122, 0.9);
 }
 
-.LoginCard .MuiFormControl-root:nth-child(2) {
-  margin: 0 0 25px 0 !important;
-}
-
-.LoginWrapper a:last-child {
-  color: white;
-  background-color: #d75b79;
-
-  font-weight: 500;
-  font-size: 1.25rem;
-  text-decoration: none;
-
-  width: fit-content;
-  margin: 20px 0;
-  padding: 8px 40px;
-  border-radius: 0px 20px 20px 20px;
-
-  -webkit-user-drag: none;
-  transition: ease all .5s;
-}
-
 @media (max-width: 928px) {
-  .LoginWrapper {
+  .ForgotPasswordWrapper {
     margin: 4rem 0;
   }
 
-  .LoginHeader .Icon {
+  .ForgotPasswordHeader .Icon {
     left: 1.5rem;
   }
 }
 
 @media (max-width: 688px) {
-  .LoginHeader .Icon {
+  .ForgotPasswordHeader .Icon {
     left: 1.25rem;
   }
 
-  .LoginBody h2 {
+  .ForgotPasswordBody h2 {
     font-size: 2rem;
   }
 
-  .LoginCard a {
-    font-size: 1.125rem;
-  }
-
-  .LoginCardSubmit {
+  .ForgotPasswordCard .ForgotPasswordCardSubmit {
     font-size: 1.5rem;
   }
 
-  .LoginCard .MuiInputBase-input {
+  .ForgotPasswordCard .MuiInputBase-input {
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }
 
-  .LoginCard .MuiInputBase-input::placeholder {
+  .ForgotPasswordCard .MuiInputBase-input::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }
 
-
-
-  .LoginWrapper a:last-child {
+  .ForgotPasswordWrapper a {
     font-size: 1.5rem;
   }
 }
