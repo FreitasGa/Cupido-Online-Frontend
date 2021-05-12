@@ -30,6 +30,7 @@
 
 .NotFoundBody h2 {
   text-align: center;
+  
   margin: 0 10px;
 }
 
@@ -44,6 +45,7 @@
   padding: 10px 16px;
   margin: 20px;
   border-radius: 5px;
+
   transition: all 0.5s ease;
 }
 

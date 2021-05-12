@@ -1,15 +1,23 @@
 .LoginHeader {
   background-color: #d75b79;
-  color: white;
+  color: white !important;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   height: 6.25rem;
 }
 
-.LoginHeader.Logo{
+.LoginHeader .Icon {
+  position: absolute;
+  left: 2rem;
+
+  transition: ease all .5s;
+}
+
+.LoginHeader.Logo {
   color: inherit;
 
   font-weight: 500;
@@ -17,6 +25,7 @@
 
   text-decoration: none;
   -webkit-user-drag: none;
+  transition: ease all .5s;
 }
 
 .LoginBody {
@@ -36,14 +45,17 @@
   font-weight: 600;
 
   margin-bottom: 5px;
+
   transition: ease all .5s;
 }
 
 .LoginWrapper {
   display: flex;
   flex-direction: column;
+
   margin: 8.5rem 0;
   width: fit-content;
+
   transition: ease all .5s;
 }
 
@@ -79,7 +91,6 @@
 
 .LoginCard button:hover {
   border-bottom: 1px solid #d75b79;
-  
 }
 
 .LoginCard .LoginCardSubmit {
@@ -108,7 +119,7 @@
   margin: 0 0 25px 0 !important;
 }
 
-.LoginWrapper a{
+.LoginWrapper a {
   color: white;
   background-color: #d75b79;
 
@@ -127,6 +138,45 @@
 
 @media (max-width: 928px) {
   .LoginWrapper {
-    margin: 5.25rem 0;
+    margin: 4rem 0;
+  }
+
+  .LoginHeader .Icon {
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 688px) {
+  .LoginHeader .Icon {
+    left: 1.25rem;
+  }
+
+  .LoginBody h2 {
+    font-size: 2rem;
+  }
+
+  .LoginCard button {
+    font-size: 1.125rem;
+  }
+
+  .LoginCard .LoginCardSubmit {
+    font-size: 1.5rem;
+  }
+
+  .LoginCard .MuiInputBase-input {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .LoginCard .MuiInputBase-input::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .LoginWrapper a {
+    font-size: 1.5rem;
   }
 }

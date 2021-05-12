@@ -15,6 +15,7 @@
   font-weight: 600;
 
   margin-bottom: 5px;
+
   transition: ease all .5s;
 }
 
@@ -33,13 +34,14 @@
   border-bottom: solid 2px #d75b79;
 }
 
-.HomeAbout p{
+.HomeAbout p {
   font-size: 1.125rem;
 }
 
 .HomeMailerWrapper {
   margin: 8.5rem 0;
   width: fit-content;
+  
   transition: ease all .5s;
 }
 
@@ -58,6 +60,7 @@
 .HomeBody .HomeMailerCard p {
   font-size: 1.125rem;
   font-weight: 500;
+
   margin-bottom: 7px;
 }
 
@@ -87,9 +90,32 @@
   margin: 0 0 25px 0 !important;
 }
 
+.HomeMailerCard textarea::-webkit-scrollbar {
+  width: 8px;
+}
 
-@media (max-width: 1024px){
-  .HomeBody{
+.HomeMailerCard textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb {
+  background: #888;
+
+  border-radius: 5px;
+
+  transition: ease all .5s;
+}
+
+.HomeMailerCard textarea::-webkit-scrollbar-thumb:hover {
+  background: #d75b79;
+}
+
+
+
+@media (max-width: 1024px) {
+  .HomeBody {
     justify-content: space-between;
   }
 }
@@ -99,10 +125,12 @@
     flex-direction: column;
     align-items: center;
   }
-  .HomeAbout{
+
+  .HomeAbout {
     margin: 2rem 0;
   }
-  .HomeMailerWrapper{
+
+  .HomeMailerWrapper {
     margin: 0 0 2rem 0;
   }
 }
@@ -111,7 +139,37 @@
   .HomeMailerWrapper {
     margin-top: 0rem;
   }
-  .HomeAbout{
+
+  .HomeAbout {
     width: 22rem;
+  }
+
+  .HomeBody h2 {
+    font-size: 2rem;
+  }
+
+  .HomeAbout p {
+    font-size: 1.25rem;
+  }
+
+  .HomeBody .HomeMailerCard p {
+    font-size: 1.25rem;
+  }
+
+  .HomeMailerCard .MailerCardSubmit {
+    font-size: 1.50rem;
+  }
+
+  .HomeMailerCard .MuiInputBase-input {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .HomeMailerCard .MuiInputBase-input::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+    
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
   }
 }

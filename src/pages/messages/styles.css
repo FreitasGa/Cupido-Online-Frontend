@@ -1,0 +1,29 @@
+.MessageBody {
+  display: flex;
+  justify-content: center;
+}
+
+.MessageWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 60rem;
+  margin: 8.5rem 0 0 0;
+  
+  transition: ease all .5s;
+}
+
+.MessageWrapper .Message {
+  margin: 1rem;
+
+  transition: ease all .5s;
+}
+
+@media (max-width: 928px) {
+  .MessageWrapper {
+    margin: 4rem 0;
+  }
+}

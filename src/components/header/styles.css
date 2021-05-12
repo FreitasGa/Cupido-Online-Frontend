@@ -28,7 +28,12 @@
   display: flex;
   justify-content: space-between;
 
-  width: 11rem;
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinksLogged {
+  display: flex;
+  justify-content: space-between;
 
   transition: ease all .5s;
 }
@@ -52,6 +57,51 @@
 }
 
 .Header .HeaderLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.Header .HeaderLinksLogged a {
+  color: inherit;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  border-radius: 5px;
+
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinksLogged a:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.Header .HeaderLinksLogged:last-child {
+  margin-right: -8px;
+}
+
+.Header .HeaderLinksLogged button {
+  color: inherit;
+  background: none;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  margin-right: -8px;
+  border: none;
+  border-radius: 5px;
+  outline: inherit;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.Header .HeaderLinksLogged button:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
@@ -82,25 +132,18 @@
   background-color: rgba(255, 255, 255, 0.100);
 }
 
-.MuiPaper-root {
-  background: #d75b79 !important;
-  padding: 1.2rem 1.8rem !important;
-}
+.MuiDrawer-paper .HeaderDrawerLinks {
+  display: flex;
+  flex-direction: column;
 
-.MuiDrawer-paper img {
-  height: 3rem;
-  width: 3rem;
-
-  margin: 8px;
-
-  -webkit-user-drag: none;
   transition: ease all .5s;
 }
 
-.MuiDrawer-paper .HeaderDrawerLinks {
+.MuiDrawer-paper .HeaderDrawerLinksLogged {
   display: flex;
-  flex-direction: column;  
-  
+  flex-direction: column;
+  align-items: center;
+
   transition: ease all .5s;
 }
 
@@ -108,7 +151,7 @@
   color: white;
 
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.50rem;
   text-decoration: none;
 
   padding: 6px 8px;
@@ -118,7 +161,43 @@
   transition: ease all .5s;
 }
 
+.MuiDrawer-paper .HeaderDrawerLinksLogged a {
+  color: white;
+
+  font-weight: 500;
+  font-size: 1.50rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  border-radius: 5px;
+
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.MuiDrawer-paper .HeaderDrawerLinksLogged button {
+  color: white;
+  background: none;
+
+  font-weight: 500;
+  font-size: 1.50rem;
+  text-decoration: none;
+
+  padding: 6px 8px;
+  border: none;
+  border-radius: 5px;
+  outline: inherit;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
 .MuiDrawer-paper a:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.MuiDrawer-paper button:hover {
   background-color: rgba(255, 255, 255, 0.100);
 }
 
@@ -145,8 +224,8 @@
     padding: 0 1.5rem;
   }
 
-  .Header .HeaderLinks {
-    display: none;
+  .Header .HeaderLinksWrapper {
+    display: none !important;
   }
 
   .Header .HeaderDrawer {

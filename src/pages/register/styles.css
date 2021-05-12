@@ -9,7 +9,12 @@
   height: 6.25rem;
 }
 
-.RegisterHeader.Logo{
+.RegisterHeader .Icon {
+  position: absolute;
+  left: 2rem;
+}
+
+.RegisterHeader.Logo {
   color: inherit;
 
   font-weight: 500;
@@ -36,14 +41,17 @@
   font-weight: 600;
 
   margin-bottom: 5px;
+
   transition: ease all .5s;
 }
 
 .RegisterWrapper {
   display: flex;
   flex-direction: column;
+
   margin: 8.5rem 0;
   width: fit-content;
+  
   transition: ease all .5s;
 }
 
@@ -55,6 +63,15 @@
   padding: 1.25rem 1.75rem;
   border: solid #d75b79 2px;
   border-radius: 0 20px 20px 20px;
+
+  transition: ease all .5s;
+}
+
+.RegisterBody .RegisterCard p {
+  font-size: 1.125rem;
+  
+  margin: 0 0 10px;
+  width: 18.75rem;
 
   transition: ease all .5s;
 }
@@ -85,7 +102,7 @@
   margin: 0 0 25px 0 !important;
 }
 
-.RegisterWrapper a{
+.RegisterWrapper a {
   color: white;
   background-color: #d75b79;
 
@@ -104,6 +121,41 @@
 
 @media (max-width: 928px) {
   .RegisterWrapper {
-    margin: 5.25rem 0;
+    margin: 4rem 0;
+  }
+
+  .RegisterHeader .Icon {
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 688px) {
+  .RegisterHeader .Icon {
+    left: 1.25rem;
+  }
+
+  .RegisterBody h2 {
+    font-size: 2rem;
+  }
+
+  .RegisterCard .RegisterCardSubmit {
+    font-size: 1.5rem;
+  }
+
+  .RegisterCard .MuiInputBase-input {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .RegisterCard .MuiInputBase-input::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .RegisterWrapper a {
+    font-size: 1.5rem;
   }
 }
