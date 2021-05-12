@@ -79,8 +79,8 @@ export default function ForgotPassword() {
       <div className="ForgotPasswordWrapper">
         <h2>Esqueci a senha</h2>
         <form className="ForgotPasswordCard" onSubmit={handleSubmit} >
-          <p>Digite o email para enviar o código de recuperação</p>
-          <TextField id="standard-basic" placeholder="Email" type="email" autoFocus onChange={(e) => setEmail(e.target.value)} />
+          <p>Digite o e-mail para enviar o código de recuperação</p>
+          <TextField id="standard-basic" placeholder="E-mail" type="email" autoFocus onChange={(e) => setEmail(e.target.value)} />
           <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="ForgotPasswordCardSubmit">
             Enviar
           </LoaderButton>
@@ -94,7 +94,7 @@ export default function ForgotPassword() {
       <div className="ForgotPasswordWrapper">
         <h2>Nova senha</h2>
         <form className="ForgotPasswordCard" onSubmit={handleConfirmationSubmit} >
-          <p>Verifique o o código que foi enviado ao seu email</p>
+          <p>Verifique o o código que foi enviado ao seu e-mail</p>
           <TextField id="standard-basic" placeholder="Senha" type="password" autoFocus onChange={(e) => setPassword(e.target.value)} />
           <TextField id="standard-basic" placeholder="Confirme a senha" type="password" onChange={(e) => setConfirmPassword(e.target.value)} />
           <TextField id="standard-basic" placeholder="Código" onChange={(e) => setCode(e.target.value)} />

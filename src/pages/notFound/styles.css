@@ -9,7 +9,7 @@
   height: 6.25rem;
 }
 
-.NotFoundHeader.Logo{
+.NotFoundHeader .Logo{
   color: inherit;
 
   font-weight: 500;

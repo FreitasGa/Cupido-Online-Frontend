@@ -1,4 +1,4 @@
-.ProfileBody {
+.EditPasswordBody {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -8,7 +8,7 @@
   transition: ease all .5s;
 }
 
-.ProfileBody h2 {
+.EditPasswordBody h2 {
   color: #d75b79;
 
   font-size: 1.875rem;
@@ -17,32 +17,6 @@
   margin-bottom: 5px;
 
   transition: ease all .5s;
-}
-
-.ProfileWrapper {
-  display: flex;
-  flex-direction: column;
-
-  margin: 8.5rem 0;
-  width: fit-content;
-
-  transition: ease all .5s;
-}
-
-.ProfileCard {
-  display: flex;
-  flex-direction: column;
-
-  width: fit-content;
-  padding: 1.25rem 1.75rem;
-  border: solid #d75b79 2px;
-  border-radius: 0 20px 20px 20px;
-
-  transition: ease all .5s;
-}
-
-.ProfileCard h3 {
-  margin-bottom: 5px;
 }
 
 .EditPasswordWrapper {
@@ -97,33 +71,13 @@
   margin: 0 0 25px 0 !important;
 }
 
-@media (max-width: 1024px) {
-  .ProfileBody {
-    justify-content: space-around;
-  }
-}
-
 @media (max-width: 928px) {
-  .ProfileBody {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ProfileWrapper {
-    margin: 2rem 0;
-  }
-
   .EditPasswordWrapper {
-    margin: 0 0 2rem 0;
+    margin: 4rem 0;
   }
-
 }
 
 @media (max-width: 688px) {
-  .EditPasswordWrapper {
-    margin-top: 0rem;
-  }
-
   .ProfileBody h2 {
     font-size: 2rem;
   }

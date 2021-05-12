@@ -89,14 +89,14 @@ export default function Register() {
         <h2>Registro</h2>
         <form className="RegisterCard" onSubmit={handleSubmit}>
           <TextField id="standard-basic" placeholder="Nome" autoFocus onChange={(e) => setName(e.target.value)} />
-          <TextField id="standard-basic" placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)} />
+          <TextField id="standard-basic" placeholder="E-mail" type="email" onChange={(e) => setEmail(e.target.value)} />
           <TextField id="standard-basic" placeholder="Senha" type="password" onChange={(e) => setPassword(e.target.value)} />
           <TextField id="standard-basic" placeholder="Confirme a senha" type="password" onChange={(e) => setConfirmPassword(e.target.value)} />
           <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="RegisterCardSubmit">
             Criar conta
           </LoaderButton>
         </form>
-        <Link to="/login">Entre com email</Link>
+        <Link to="/login">Entre com e-mail</Link>
       </div>
     );
   }
@@ -106,7 +106,7 @@ export default function Register() {
       <div className="RegisterWrapper">
         <h2>Confirme o código</h2>
         <form className="RegisterCard" onSubmit={handleConfirmationSubmit}>
-          <p>Verifique o o código que foi enviado ao seu email</p>
+          <p>Verifique o o código que foi enviado ao seu e-mail</p>
           <TextField id="standard-basic" placeholder="Código" autoFocus onChange={(e) => setConfirmationCode(e.target.value)} />
           <LoaderButton type="submit" isLoading={isLoading} disabled={!validateConfirmationForm()} className="RegisterCardSubmit">
             Verificar

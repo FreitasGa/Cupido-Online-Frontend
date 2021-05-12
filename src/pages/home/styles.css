@@ -38,8 +38,14 @@
   font-size: 1.125rem;
 }
 
+.HomeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .HomeMailerWrapper {
-  margin: 8.5rem 0;
+  margin: 8.5rem 0 2rem 0;
   width: fit-content;
 
   transition: ease all .5s;
@@ -114,6 +120,67 @@
 
 .HomeMailerCard textarea::-webkit-scrollbar-thumb:hover {
   background: #d75b79;
+}
+
+.HomeProfile {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 0 8.5rem 0;
+  width: fit-content;
+
+  transition: ease all .5s;
+}
+
+.HomeProfileCard {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.25rem 1.75rem;
+  border: solid #d75b79 2px;
+  border-radius: 0 20px 20px 20px;
+
+  transition: ease all .5s;
+}
+
+.HomeProfileCard h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  width: 18.75rem;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.HomeProfileCard p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.HomeProfile a {
+  color: #d75b79;
+  background: none;
+
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+
+  width: fit-content;
+  border: none;
+  outline: inherit;
+  margin: 10px 0 0 0;
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 1px dashed #d75b79;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.HomeProfile a:hover {
+  border-bottom: 1px solid #d75b79;
 }
 
 @media (max-width: 1024px) {

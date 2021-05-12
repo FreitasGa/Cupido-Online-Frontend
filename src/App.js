@@ -17,7 +17,6 @@ export default function App() {
 
   async function onLoad() {
     try {
-      console.log("here");
       await Auth.currentSession();
       userHasAuthenticated(true);
     } catch (err) {

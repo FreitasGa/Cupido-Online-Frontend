@@ -44,7 +44,7 @@ export default function Header() {
         </div>
 
         <div className="HeaderLinksLogged" style={{ display: isAuthenticated ? "flex" : "none" }}>
-          <Link to="/profile">Perfil</Link>
+          <Link to="/">Inicio</Link>
           <Link to="/messages">Mensagens</Link>
           <button onClick={handleLogout}>Sair</button>
         </div>
@@ -63,7 +63,7 @@ export default function Header() {
           </div>
           
           <div className="HeaderDrawerLinksLogged" style={{ display: isAuthenticated ? "flex" : "none" }}>
-            <Link to="/profile">Perfil</Link>
+            <Link to="/">Inicio</Link>
             <Link to="/messages">Mensagens</Link>
             <button onClick={handleLogout}>Sair</button>
           </div>

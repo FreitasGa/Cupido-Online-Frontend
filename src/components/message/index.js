@@ -16,7 +16,6 @@ export default function Message(props) {
     try {
       await API.del("cupido-online", `/message/${props.id}`)
 
-      alert("Mensagem apagada");
       props.callback()
     } catch (err) {
       console.log(err);

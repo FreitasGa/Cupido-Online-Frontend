@@ -54,9 +54,9 @@ export default function Login() {
         <div className="LoginWrapper">
           <h2>Login</h2>
           <form className="LoginCard" onSubmit={handleSubmit}>
-            <TextField id="standard-basic" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoFocus />
-            <TextField id="standard-basic" placeholder="Senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Link to="/forgot-password" className="LoginForgotPassword">Esqueci a Senha</Link>
+            <TextField id="standard-basic" placeholder="E-mail" type="email" onChange={(e) => setEmail(e.target.value)} autoFocus />
+            <TextField id="standard-basic" placeholder="Senha" type="password" onChange={(e) => setPassword(e.target.value)} />
+            <Link to="/forgot-password" className="LoginForgotPassword">Esqueci a senha</Link>
             <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="LoginCardSubmit">
               Entrar
             </LoaderButton>

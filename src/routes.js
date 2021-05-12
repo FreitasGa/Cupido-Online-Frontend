@@ -8,7 +8,8 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Messages from "./pages/messages";
 import ForgotPassword from "./pages/forgotPassword";
-import Profile from "./pages/profile";
+import EditPassword from "./pages/editPassword";
+import Match from "./pages/match";
 
 import NotFound from "./pages/notFound";
 
@@ -30,7 +31,8 @@ export default function Routes() {
       <Route exact path="/register" component={Register} />
       <Route exact path="/forgot-password" component={ForgotPassword} />
       <PrivateRoute exact path="/messages" component={Messages} />
-      <PrivateRoute exact path="/profile" component={Profile} />
+      <PrivateRoute exact path="/edit-password" component={EditPassword} />
+      <Route path="/messages/:id/match/:match" component={Match} />
       <Route component={NotFound}/>
     </Switch>
   );

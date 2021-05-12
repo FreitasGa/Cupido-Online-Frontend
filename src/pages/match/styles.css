@@ -1,0 +1,201 @@
+.MatchHeader {
+  background-color: #d75b79;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 6.25rem;
+}
+
+.MatchHeader .Logo {
+  color: inherit;
+
+  font-weight: 500;
+  font-size: 2.5rem;
+
+  text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+.MatchBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  padding: 0 2rem;
+
+  transition: ease all .5s;
+}
+
+.MatchBody h2 {
+  color: #d75b79;
+
+  font-size: 1.875rem;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+
+  transition: ease all .5s;
+}
+
+.MatchAbout {
+  display: flex;
+  flex-direction: column;
+
+  width: 30rem;
+  margin: 8.5rem 0;
+
+  transition: ease all .5s;
+}
+
+.MatchAbout h2 {
+  padding-bottom: 5px;
+  border-bottom: solid 2px #d75b79;
+}
+
+.MatchAbout p {
+  font-size: 1.125rem;
+}
+
+.MatchAbout p:first-child {
+  font-size: 1.125rem;
+}
+
+.MatchAbout a {
+  color: white;
+  background: #d75b79;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  width: 18.75rem;
+  margin-top: 15px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 0 20px 20px 20px;
+  outline: inherit;
+
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: ease all .5s;
+}
+
+.MatchAbout a:hover{
+  background-color: rgba(215, 91, 122, 0.9);
+}
+
+.MatchMailer {
+  margin: 8.5rem 0;
+  width: fit-content;
+
+  transition: ease all .5s;
+}
+
+.MatchMailerCard {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+  padding: 1.25rem 1.75rem;
+  border: solid #d75b79 2px;
+  border-radius: 0 20px 20px 20px;
+
+  transition: ease all .5s;
+}
+
+.MatchMailerCard p {
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  margin-bottom: 7px;
+}
+
+.MatchMailerCard .MuiFormControl-root:nth-child(4) {
+  margin: 0 0 25px 0 !important;
+}
+
+.MatchMailerCard textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.MatchMailerCard textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.MatchMailerCard textarea::-webkit-scrollbar-thumb {
+  background: #888;
+
+  border-radius: 5px;
+
+  transition: ease all .5s;
+}
+
+.MatchMailerCard textarea::-webkit-scrollbar-thumb:hover {
+  background: #d75b79;
+}
+
+@media (max-width: 1024px) {
+  .MatchBody {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 928px) {
+  .MatchBody {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MatchAbout {
+    margin: 2rem 0;
+  }
+
+  .MatchMailer {
+    margin: 0 0 2rem 0;
+  }
+}
+
+@media (max-width: 688px) {
+  .MatchMailer {
+    margin-top: 0rem;
+  }
+
+  .MatchAbout {
+    width: 22rem;
+  }
+
+  .MatchBody h2 {
+    font-size: 2rem;
+  }
+
+  .MatchAbout p {
+    font-size: 1.25rem;
+  }
+
+  .MatchMailerCard p {
+    font-size: 1.25rem;
+  }
+
+  .MailerCardSubmit {
+    font-size: 1.50rem;
+  }
+
+  .MatchMailerCard .MuiInputBase-input {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+
+  .MatchMailerCard .MuiInputBase-input::placeholder {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+}

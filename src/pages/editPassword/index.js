@@ -11,14 +11,10 @@ import LoaderButton from "../../components/loaderButton";
 
 import "./styles.css";
 
-export default function Profile() {
+export default function EditPassword() {
   const { isAuthenticated } = useAppContext();
 
   const [user, setUser] = useState();
-  const [userAttributes, setUserAttributes] = useState({
-    email: "",
-    name: "",
-  });
   const [password, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -33,10 +29,7 @@ export default function Profile() {
 
       try {
         const user = await Auth.currentAuthenticatedUser();
-        const { attributes } = user;
         setUser(user);
-        setUserAttributes(attributes);
-        console.log(attributes);
       } catch (err) {
         console.log(err);
         onError(err);
@@ -70,17 +63,9 @@ export default function Profile() {
   }
 
   return (
-    <div className="Profile">
+    <div className="EditPassword">
       <Header />
-      <div className="ProfileBody">
-        <div className="ProfileWrapper">
-          <h2>Perfil</h2>
-          <div className="ProfileCard">
-            <h3>{userAttributes.name}</h3>
-            <p>{userAttributes.email}</p>
-          </div>
-        </div>
-        
+      <div className="EditPasswordBody">
         <div className="EditPasswordWrapper">
           <h2>Mudar senha</h2>
           <form className="EditPasswordCard" onSubmit={handleSubmit}>
