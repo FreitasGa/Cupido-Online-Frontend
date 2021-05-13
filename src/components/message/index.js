@@ -14,11 +14,9 @@ export default function Message(props) {
     event.preventDefault();
 
     try {
-      await API.del("cupido-online", `/message/${props.id}`)
-
-      props.callback()
+      await API.del("cupido-online", `/message/${props.id}`);
+      props.callback();
     } catch (err) {
-      console.log(err);
       onError(err);
     }
   }
@@ -30,7 +28,11 @@ export default function Message(props) {
       <div className="MessageContent">
         <p>{props.content}</p>
       </div>
-      {props.match ? <FavoriteIcon className="Icon" fontSize="large" /> : <FavoriteBorderIcon fontSize="large" />}
+      {props.match ? (
+        <FavoriteIcon className="Icon" fontSize="large" />
+      ) : (
+        <FavoriteBorderIcon fontSize="large" />
+      )}
       <button onClick={handleSubmit}>
         <DeleteIcon fontSize="large" />
       </button>

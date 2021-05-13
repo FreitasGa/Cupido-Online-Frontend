@@ -9,7 +9,7 @@
   height: 6.25rem;
 }
 
-.NotFoundHeader .Logo{
+.NotFoundHeader .Logo {
   color: inherit;
 
   font-weight: 500;
@@ -30,7 +30,7 @@
 
 .NotFoundBody h2 {
   text-align: center;
-  
+
   margin: 0 10px;
 }
 
@@ -49,6 +49,6 @@
   transition: all 0.5s ease;
 }
 
-.NotFoundBody a:hover{
+.NotFoundBody a:hover {
   background-color: rgba(215, 91, 122, 0.900);
 }

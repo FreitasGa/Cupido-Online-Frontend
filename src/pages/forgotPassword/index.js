@@ -8,8 +8,8 @@ import { TextField } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 import LoaderButton from "../../components/loaderButton";
-import "./styles.css";
 
+import "./styles.css";
 
 export default function ForgotPassword() {
   const history = useHistory();
@@ -45,7 +45,6 @@ export default function ForgotPassword() {
       handleReset();
       setIsLoading(false);
     } catch (err) {
-      console.log(err);
       setIsLoading(false);
       onError(err);
     }
@@ -59,20 +58,19 @@ export default function ForgotPassword() {
       await Auth.forgotPasswordSubmit(email, code, password);
       handleReset();
       setIsLoading(false);
-      alert("Senha alterada")
+      alert("Senha alterada");
       history.push("/login");
     } catch (err) {
-      console.log(err);
       setIsLoading(false);
       onError(err);
     }
   }
 
   const handleReset = () => {
-    Array.from(document.querySelectorAll('input')).forEach(
-      input => (input.value = "")
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
     );
-  }
+  };
 
   function forgetPasswordForm() {
     return (

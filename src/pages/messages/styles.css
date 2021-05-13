@@ -14,7 +14,7 @@
 
   max-width: 70rem;
   margin: 3rem 0 0 0;
-  
+
   transition: ease all .5s;
 }
 
@@ -37,7 +37,7 @@
     margin: 2rem 0;
   }
 
-  .MessagePlaceholder{
+  .MessagePlaceholder {
     margin: 6rem 2rem;
   }
 }

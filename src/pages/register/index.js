@@ -9,6 +9,7 @@ import { TextField } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 import LoaderButton from "../../components/loaderButton";
+
 import "./styles.css";
 
 export default function Register() {
@@ -26,8 +27,8 @@ export default function Register() {
 
   function validateForm() {
     return (
-      name.length > 0 && 
-      email.length > 0 && 
+      name.length > 0 &&
+      email.length > 0 &&
       password.length > 0 &&
       password === confirmPassword
     );
@@ -47,15 +48,14 @@ export default function Register() {
         password: password,
         attributes: {
           name: name,
-        }
+        },
       });
       handleReset();
       setIsLoading(false);
       setNewUser(newUser);
     } catch (err) {
-      console.log(err);
-      onError(err);
       setIsLoading(false);
+      onError(err);
     }
   }
 
@@ -69,19 +69,19 @@ export default function Register() {
 
       handleReset();
       userHasAuthenticated(true);
+      setIsLoading(false);
       history.push("/");
     } catch (err) {
-      console.log(err);
-      onError(err);
       setIsLoading(false);
+      onError(err);
     }
   }
 
   const handleReset = () => {
-    Array.from(document.querySelectorAll('input')).forEach(
-      input => (input.value = "")
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
     );
-  }
+  };
 
   function registerForm() {
     return (

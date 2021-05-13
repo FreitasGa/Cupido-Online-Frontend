@@ -87,7 +87,7 @@
   transition: ease all .5s;
 }
 
-.MatchAbout a:hover{
+.MatchAbout a:hover {
   background-color: rgba(215, 91, 122, 0.9);
 }
 

@@ -51,7 +51,7 @@
 
   margin: 8.5rem 0;
   width: fit-content;
-  
+
   transition: ease all .5s;
 }
 
@@ -69,7 +69,7 @@
 
 .RegisterBody .RegisterCard p {
   font-size: 1.125rem;
-  
+
   margin: 0 0 10px;
   width: 18.75rem;
 
@@ -149,9 +149,6 @@
   }
 
   .RegisterCard .MuiInputBase-input::placeholder {
-    color: black !important;
-    opacity: 1 !important;
-
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }

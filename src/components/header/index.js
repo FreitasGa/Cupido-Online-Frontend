@@ -7,8 +7,8 @@ import { useAppContext } from "../../libs/contextLib";
 import { SwipeableDrawer } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-import "./styles.css";
 import logo from "../../assets/g841.png";
+import "./styles.css";
 
 export default function Header() {
   const history = useHistory();
@@ -55,8 +55,8 @@ export default function Header() {
           <MenuIcon fontSize="large" />
         </button>
         <SwipeableDrawer anchor="left" open={drawer} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-          <img alt="Cupido Online" src={logo} />
-
+          <p>Cupido Online</p>
+          
           <div className="HeaderDrawerLinks" style={{ display: isAuthenticated ? "none" : "flex" }}>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>

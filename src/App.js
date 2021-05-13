@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Auth } from "aws-amplify";
 
-import Routes from "./routes";
 import { AppContext } from "./libs/contextLib";
+import { onError } from "./libs/errorLib";
+
+import Routes from "./routes";
 
 import "./styles.css";
-import { onError } from "./libs/errorLib";
 
 export default function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -20,7 +21,6 @@ export default function App() {
       await Auth.currentSession();
       userHasAuthenticated(true);
     } catch (err) {
-      console.log(err);
       if (err !== "No current user") {
         onError(err);
       }

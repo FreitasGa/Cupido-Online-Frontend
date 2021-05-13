@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { API } from "aws-amplify"
+import { API } from "aws-amplify";
 
 import { onError } from "../../libs/errorLib";
 
@@ -8,14 +8,13 @@ import "./styles.css";
 
 export default function Match() {
   const { id, user_id } = useParams();
-  console.log(id , user_id);
+  console.log(id, user_id);
 
   useEffect(() => {
     async function onLoad() {
       try {
         await API.put("cupido-online", `/message/${id}/match/${user_id}`);
       } catch (err) {
-        console.log(err);
         onError(err);
       }
     }

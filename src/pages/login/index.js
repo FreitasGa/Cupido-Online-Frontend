@@ -9,6 +9,7 @@ import { TextField } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 import LoaderButton from "../../components/loaderButton";
+
 import "./styles.css";
 
 export default function Login() {
@@ -25,15 +26,14 @@ export default function Login() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setIsLoading(true);
 
+    setIsLoading(true);
     try {
       await Auth.signIn(email, password);
       userHasAuthenticated(true);
       setIsLoading(false);
       history.push("/");
     } catch (err) {
-      console.log(err);
       setIsLoading(false);
       onError(err);
     }

@@ -15,7 +15,7 @@ export default function EditPassword() {
   const { isAuthenticated } = useAppContext();
 
   const [user, setUser] = useState();
-  const [password, setPassword] = useState("");
+  const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -31,7 +31,6 @@ export default function EditPassword() {
         const user = await Auth.currentAuthenticatedUser();
         setUser(user);
       } catch (err) {
-        console.log(err);
         onError(err);
       }
     }
@@ -41,7 +40,7 @@ export default function EditPassword() {
 
   function validateForm() {
     return (
-      password.length > 0 &&
+      oldPassword.length > 0 &&
       newPassword.length > 0 &&
       newPassword === confirmPassword
     );
@@ -52,13 +51,12 @@ export default function EditPassword() {
 
     setIsLoading(true);
     try {
-      await Auth.changePassword(user, password, newPassword);
+      await Auth.changePassword(user, oldPassword, newPassword);
       setIsLoading(false);
       alert("Senha Alterada");
     } catch (err) {
-      console.log(err);
-      onError(err);
       setIsLoading(false);
+      onError(err);
     }
   }
 
@@ -69,7 +67,7 @@ export default function EditPassword() {
         <div className="EditPasswordWrapper">
           <h2>Mudar senha</h2>
           <form className="EditPasswordCard" onSubmit={handleSubmit}>
-            <TextField id="standard-basic" placeholder="Senha atual" type="password" onChange={(e) => setPassword(e.target.value)} />
+            <TextField id="standard-basic" placeholder="Senha atual" type="password" onChange={(e) => setOldPassword(e.target.value)} />
             <TextField id="standard-basic" placeholder="Nova senha" type="password" onChange={(e) => setNewPassword(e.target.value)} />
             <TextField id="standard-basic" placeholder="Confirme a nova senha" type="password" onChange={(e) => setConfirmPassword(e.target.value)} />
             <LoaderButton type="submit" isLoading={isLoading} disabled={!validateForm()} className="EditPasswordCardSubmit">

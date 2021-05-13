@@ -26,9 +26,7 @@ export default function Messages() {
         const messages = await API.get("cupido-online", "/message");
         setMessages(messages);
         sessionStorage.setItem("cupido-online/messages",JSON.stringify(messages));
-        console.log(messages);
       } catch (err) {
-        console.log(err);
         onError(err);
       }
     }
@@ -47,11 +45,11 @@ export default function Messages() {
         <div className="MessageWrapper">
           {messages.length === 0 ? (
             <h2 className="MessagePlaceholder">Parece que você ainda não tem nenhuma mensagem.</h2>
-          ) : 
+          ) : (
             messages.map(({id, crush_name, crush_email, content, is_match}) => (
               <Message key={id} id={id} name={crush_name} email={crush_email} content={content} match={is_match} callback={update} />
             ))
-          }
+          )}
         </div>
       </div>
     </div>

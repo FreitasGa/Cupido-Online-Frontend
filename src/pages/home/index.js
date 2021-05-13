@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { onError } from "../../libs/errorLib";
 import { useAppContext } from "../../libs/contextLib";
 
-import Header from "../../components/header";
 import { TextField } from "@material-ui/core";
+
+import Header from "../../components/header";
 import LoaderButton from "../../components/loaderButton";
 
 import "./styles.css";
-
 
 export default function Home() {
   const { isAuthenticated } = useAppContext();
@@ -37,15 +37,14 @@ export default function Home() {
         const { attributes } = user;
         setUserAttributes({
           email: attributes.email,
-          name: attributes.name
+          name: attributes.name,
         });
       } catch (err) {
-        console.log(err);
         onError(err);
       }
     }
 
-    onLoad()
+    onLoad();
   }, [isAuthenticated]);
 
   function validateForm() {
@@ -54,7 +53,7 @@ export default function Home() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    
+
     const message = {
       crush_name: crushName,
       crush_email: crushEmail,
@@ -62,7 +61,7 @@ export default function Home() {
     };
 
     setIsLoading(true);
-    
+
     try {
       if (!isAuthenticated) {
         await sendMessage(message);
@@ -76,15 +75,14 @@ export default function Home() {
             crush_email: crushEmail,
             content,
             id,
-            user_id
+            user_id,
           },
         });
       }
-      handleReset()
+      handleReset();
       setIsLoading(false);
       alert("Mensagem enviada");
     } catch (err) {
-      console.log(err);
       setIsLoading(false);
       onError(err);
     }
@@ -103,13 +101,13 @@ export default function Home() {
   }
 
   const handleReset = () => {
-    Array.from(document.querySelectorAll('input')).forEach(
-      input => (input.value = "")
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
     );
-    Array.from(document.querySelectorAll('textarea')).forEach(
-      input => (input.value = "")
+    Array.from(document.querySelectorAll("textarea")).forEach(
+      (input) => (input.value = "")
     );
-  }
+  };
 
   return (
     <div className="Home">
