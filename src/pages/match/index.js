@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { API } from "aws-amplify"
 
@@ -7,12 +7,22 @@ import { onError } from "../../libs/errorLib";
 import "./styles.css";
 
 export default function Match() {
-  const { id, match } = useParams();
+  const [params, setParams] = useState({
+    id: "",
+    match: ""
+  });
+  
+  const pathParams = useParams();
+
+  setParams({
+    id: pathParams.id,
+    match: pathParams.match,
+  });
 
   useEffect(() => {
     async function onLoad() {
       try {
-        await API.put("cupido-online", `/message/${id}/match/${match}`);
+        await API.put("cupido-online", `/message/${params.id}/match/${params.match}`);
       } catch (err) {
         console.log(err);
         onError(err);
@@ -20,7 +30,7 @@ export default function Match() {
     }
 
     onLoad();
-  });
+  }, [params]);
 
   return (
     <div className="Match">
