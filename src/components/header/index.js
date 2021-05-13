@@ -7,7 +7,6 @@ import { useAppContext } from "../../libs/contextLib";
 import { SwipeableDrawer } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-import logo from "../../assets/g841.png";
 import "./styles.css";
 
 export default function Header() {
