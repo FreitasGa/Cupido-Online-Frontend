@@ -140,7 +140,7 @@ export default function Home() {
               </LoaderButton>
             </form>
           </div>
-          <div className="HomeProfile">
+          <div className="HomeProfile" style={{ display: isAuthenticated ? "flex" : "none" }}>
             <h2>Perfil</h2>
             <div className="HomeProfileCard">
               <h3>{userAttributes.name}</h3>

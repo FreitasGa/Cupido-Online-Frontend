@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { API, Auth } from "aws-amplify"
+import { API } from "aws-amplify"
 
 import { onError } from "../../libs/errorLib";
-
-import { TextField } from "@material-ui/core";
-import LoaderButton from "../../components/loaderButton";
 
 import "./styles.css";
 
@@ -21,6 +18,8 @@ export default function Match() {
         onError(err);
       }
     }
+
+    onLoad();
   });
 
   return (
