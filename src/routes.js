@@ -16,11 +16,14 @@ import NotFound from "./pages/notFound";
 export default function Routes() {
   const { isAuthenticated } = useAppContext();
 
-  function PrivateRoute({ component: Component, ...rest}) {
+  function PrivateRoute({ component: Component, ...rest }) {
     return (
-      <Route {...rest} render={(props) => {
-        return isAuthenticated ? <Component {...props}/> : <NotFound/>
-      }} />
+      <Route
+        {...rest}
+        render={(props) => {
+          return isAuthenticated ? <Component {...props} /> : <NotFound />;
+        }}
+      />
     );
   }
 
@@ -33,7 +36,7 @@ export default function Routes() {
       <PrivateRoute exact path="/messages" component={Messages} />
       <PrivateRoute exact path="/edit-password" component={EditPassword} />
       <Route path="/messages/:id/match/:user_id" component={Match} />
-      <Route component={NotFound}/>
+      <Route component={NotFound} />
     </Switch>
   );
 }

@@ -116,14 +116,17 @@ export default function Home() {
         <div className="HomeAbout">
           <h2>Bem-Vindo</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet
-            elementum augue. Pellentesque in ultrices mi. Proin pharetra
-            vulputate justo, ac tristique est tempor a. Sed feugiat ipsum
-            hendrerit elit rhoncus, eu eleifend eros accumsan. Nulla quis
-            gravida lacus. Phasellus feugiat metus ut maximus faucibus. Integer
-            non rutrum odio. Duis at ipsum sodales ipsum aliquet dignissim
-            hendrerit eget eros. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus.
+            Nós somos a Cupido Online, uma plataforma de envio de mensagens 
+            anônimas por email.
+          </p>
+          <p>
+            Você pode usar o menu Nova Mensagem para enviar um recado, basta nos 
+            informar o nome, pode ser um apelido, o e-mail e a sua mensagem que 
+            nós fazemos o resto. 
+          </p>
+          <p>
+            Ah, você também pode criar uma conta na plataforma para acompanhar o 
+            histórico das suas mensagens e acompanhar se alguma teve um match.
           </p>
         </div>
         <div className="HomeWrapper">
