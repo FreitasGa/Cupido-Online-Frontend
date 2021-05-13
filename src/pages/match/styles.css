@@ -87,12 +87,6 @@
   background-color: rgba(215, 91, 122, 0.9);
 }
 
-@media (max-width: 1024px) {
-  .MatchBody {
-    justify-content: space-between;
-  }
-}
-
 @media (max-width: 928px) {
   .MatchBody {
     flex-direction: column;
