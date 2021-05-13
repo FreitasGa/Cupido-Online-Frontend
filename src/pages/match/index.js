@@ -7,13 +7,13 @@ import { onError } from "../../libs/errorLib";
 import "./styles.css";
 
 export default function Match() {
-  const { id, match } = useParams();
-  console.log(id , match);
+  const { id, user_id } = useParams();
+  console.log(id , user_id);
 
   useEffect(() => {
     async function onLoad() {
       try {
-        await API.put("cupido-online", `/message/${id}/match/${match}`);
+        await API.put("cupido-online", `/message/${id}/match/${user_id}`);
       } catch (err) {
         console.log(err);
         onError(err);

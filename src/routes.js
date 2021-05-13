@@ -32,7 +32,7 @@ export default function Routes() {
       <Route exact path="/forgot-password" component={ForgotPassword} />
       <PrivateRoute exact path="/messages" component={Messages} />
       <PrivateRoute exact path="/edit-password" component={EditPassword} />
-      <Route path="/messages/:id/match/:match" component={Match} />
+      <Route path="/messages/:id/match/:user_id" component={Match} />
       <Route component={NotFound}/>
     </Switch>
   );
