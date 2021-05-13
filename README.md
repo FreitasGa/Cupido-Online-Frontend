@@ -15,14 +15,14 @@ O projeto foi desenvolvido utilizando:
 
 ## Estrutura
 
-📦cupido-online-frontend
- ┣ 📦public
- ┗ 📦src
-    ┣ 📂assets
-    ┣ 📂components
-    ┣ 📂libs
-    ┣ 📂pages
-    ┣ 📜App.js
-    ┣ 📜index.js
-    ┣ 📜routes.js
-    ┗ 📜styles.css
+📦cupido-online-frontend  
+ ┣ 📦public  
+ ┗ 📦src  
+    ┣ 📂assets  
+    ┣ 📂components  
+    ┣ 📂libs  
+    ┣ 📂pages  
+    ┣ 📜App.js  
+    ┣ 📜index.js  
+    ┣ 📜routes.js  
+    ┗ 📜styles.css  
