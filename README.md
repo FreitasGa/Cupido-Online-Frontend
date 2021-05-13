@@ -1,4 +1,4 @@
-## Cupido Online
+# Cupido Online
 
 Cupido Online é uma plataforma para envio de emails anônimos.
 
