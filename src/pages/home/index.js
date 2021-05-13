@@ -68,14 +68,15 @@ export default function Home() {
         await sendMessage(message);
       } else {
         const newMessage = await createMessage(message);
-        const { id } = newMessage;
+        const { id, user_id } = newMessage;
 
         await API.post("cupido-online", "/auth/email", {
           body: {
             crush_name: crushName,
             crush_email: crushEmail,
             content,
-            id
+            id,
+            user_id
           },
         });
       }
