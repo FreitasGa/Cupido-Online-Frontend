@@ -30,7 +30,7 @@ export default function Message(props) {
       <div className="MessageContent">
         <p>{props.content}</p>
       </div>
-      {props.match ? <FavoriteIcon fontSize="large" /> : <FavoriteBorderIcon fontSize="large" />}
+      {props.match ? <FavoriteIcon fontSize="large" /> : <FavoriteBorderIcon className="Icon" fontSize="large" />}
       <button onClick={handleSubmit}>
         <DeleteIcon fontSize="large" />
       </button>

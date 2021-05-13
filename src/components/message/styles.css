@@ -60,3 +60,7 @@
   -webkit-user-drag: none;
   transition: ease all .5s;
 }
+
+.Message .Icon {
+  color: #d75b79 !important;
+}
