@@ -2,6 +2,10 @@
 
 Cupido Online é uma plataforma para envio de emails anônimos.
 
+## Desing
+
+
+
 ## Tecnologias utilizadas
 
 O projeto foi desenvolvido utilizando:
